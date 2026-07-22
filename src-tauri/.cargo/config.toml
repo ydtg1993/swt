@@ -1,0 +1,5 @@
+# 使用 rust-lld 替代 MinGW ld, 解决 "export ordinal too large" 问题
+# rust-lld = LLVM 自带的链接器, 没有 PE/COFF 导出数量上限
+[target.x86_64-pc-windows-gnu]
+linker = "rust-lld"
+rustflags = ["-Clink-self-contained=yes"]

@@ -1,0 +1,36 @@
+import type zh from "./zh";
+
+const en = {
+  "app.name": "SWT2",
+  "nav.transcribe": "Transcribe",
+  "nav.realtime": "Real-time",
+  "nav.conversation": "Conversation",
+  "nav.tts": "TTS",
+  "nav.models": "Models",
+  "nav.history": "History",
+  "nav.apiServer": "API Server",
+  "nav.settings": "Settings",
+  "nav.about": "About",
+  "theme.light": "Light",
+  "theme.dark": "Dark",
+  "sidebar.collapse": "Collapse",
+  "sidebar.expand": "Expand",
+  "common.loading": "Loading...",
+  "common.save": "Save",
+  "common.cancel": "Cancel",
+  "common.delete": "Delete",
+  "common.confirm": "Confirm",
+  "common.copy": "Copy",
+  "common.export": "Export",
+  "common.start": "Start",
+  "common.stop": "Stop",
+  "common.pause": "Pause",
+  "common.resume": "Resume",
+  "server.status": "Engine Status",
+  "server.online": "Online",
+  "server.offline": "Offline",
+  "server.starting": "Starting...",
+  "server.error": "Start Failed",
+} satisfies Record<keyof typeof zh, string>;
+
+export default en;

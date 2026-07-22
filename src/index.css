@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+/* NeoBrutalism light theme */
+:root {
+  --background: hsl(60 30% 98%);
+  --foreground: hsl(0 0% 5%);
+  --card: hsl(60 30% 96%);
+  --card-foreground: hsl(0 0% 5%);
+  --primary: hsl(50 100% 50%);
+  --primary-foreground: hsl(0 0% 5%);
+  --secondary: hsl(0 0% 90%);
+  --secondary-foreground: hsl(0 0% 5%);
+  --muted: hsl(0 0% 90%);
+  --muted-foreground: hsl(0 0% 30%);
+  --accent: hsl(50 100% 50%);
+  --accent-foreground: hsl(0 0% 5%);
+  --destructive: hsl(0 85% 45%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 5%);
+  --input: hsl(0 0% 90%);
+  --ring: hsl(50 100% 50%);
+  --radius: 0rem;
+}
+
+/* NeoBrutalism dark theme */
+.dark {
+  --background: hsl(0 0% 8%);
+  --foreground: hsl(60 30% 95%);
+  --card: hsl(0 0% 12%);
+  --card-foreground: hsl(60 30% 95%);
+  --primary: hsl(50 100% 55%);
+  --primary-foreground: hsl(0 0% 5%);
+  --secondary: hsl(0 0% 18%);
+  --secondary-foreground: hsl(60 30% 95%);
+  --muted: hsl(0 0% 18%);
+  --muted-foreground: hsl(0 0% 60%);
+  --accent: hsl(50 100% 55%);
+  --accent-foreground: hsl(0 0% 5%);
+  --destructive: hsl(0 85% 55%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(60 30% 95%);
+  --input: hsl(0 0% 20%);
+  --ring: hsl(50 100% 55%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+  /* NeoBrutalism: All inputs/selects get bold borders */
+  input, select, textarea {
+    @apply border-2 border-black dark:border-white;
+  }
+}
